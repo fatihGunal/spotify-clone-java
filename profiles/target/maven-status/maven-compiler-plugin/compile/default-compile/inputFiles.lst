@@ -1,1 +1,6 @@
 /home/fatih/dev/spotify-clone-java/profiles/src/main/java/com/spotifyclone/profiles/ProfilesApplication.java
+/home/fatih/dev/spotify-clone-java/profiles/src/main/java/com/spotifyclone/profiles/profile/Profile.java
+/home/fatih/dev/spotify-clone-java/profiles/src/main/java/com/spotifyclone/profiles/profile/ProfileRepository.java
+/home/fatih/dev/spotify-clone-java/profiles/src/main/java/com/spotifyclone/profiles/profile/ProfileService.java
+/home/fatih/dev/spotify-clone-java/profiles/src/main/java/com/spotifyclone/profiles/profile/ProfileRegistrationRequest.java
+/home/fatih/dev/spotify-clone-java/profiles/src/main/java/com/spotifyclone/profiles/profile/ProfileController.java

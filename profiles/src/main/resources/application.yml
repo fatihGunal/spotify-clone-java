@@ -1,18 +1,17 @@
 server:
   port: 8080
-
 spring:
   application:
     name: profiles
   datasource:
-    username: 'fatih'
+    password: admin
     url: jdbc:postgresql://localhost:5432/profiles
-    password: 'admin'
-    jpa:
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-          format_sql: 'true'
+    username: fatih
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
       hibernate:
-        ddl-auto: update
-      show-sql: 'true'
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true

@@ -3,7 +3,7 @@ package com.spotifyclone.profiles.profile;
 import org.springframework.stereotype.Service;
 
 @Service
-public record ProfileService() {
+public record ProfileService(ProfileRepository profileRepository) {
 
     public void registerProfile(ProfileRegistrationRequest request) {
         Profile profile = Profile.builder()
@@ -15,5 +15,6 @@ public record ProfileService() {
         // TODO: Check if email valid
         // TODO: check if email not taken
         // TODO: store customer in db
+        profileRepository.save(profile);
     }
 }
