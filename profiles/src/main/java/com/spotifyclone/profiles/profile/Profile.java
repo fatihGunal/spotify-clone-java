@@ -12,5 +12,4 @@ public class Profile {
     private String email;
     private String userName;
     private String birthDate;
-    //TODO: remove this later!
 }
