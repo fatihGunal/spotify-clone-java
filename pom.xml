@@ -10,7 +10,9 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>profiles</module>
-    <module>Recommendations</module>
+    <module>recommendations</module>
+    <module>songs</module>
+    <module>playlists</module>
   </modules>
 
   <name>spotify-clone-java</name>

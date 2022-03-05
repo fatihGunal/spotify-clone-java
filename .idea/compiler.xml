@@ -8,7 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="profiles" />
-        <module name="Recommendations" />
+        <module name="playlists" />
+        <module name="recommendations" />
+        <module name="songs" />
       </profile>
     </annotationProcessing>
   </component>

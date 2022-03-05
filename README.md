@@ -2,7 +2,7 @@
 Spotify clone
 
 
-Recommendations -> temporary suspended, nice to have in future
+Recommendations -> MongoDB: temporary suspended, nice to have in future (See AI course)
 Profiles service -> postgresql
 Songs -> MongoDB
 Playlist -> postgresql
