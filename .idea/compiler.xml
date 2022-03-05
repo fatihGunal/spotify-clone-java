@@ -7,16 +7,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="profiles" />
-        <module name="playlists" />
-        <module name="recommendations" />
+        <module name="music" />
         <module name="songs" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="playlists" target="17" />
+      <module name="recommendations" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="profiles" options="" />
+      <module name="music" options="" />
     </option>
   </component>
 </project>
