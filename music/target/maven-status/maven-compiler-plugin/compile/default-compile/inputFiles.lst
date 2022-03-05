@@ -1,0 +1,6 @@
+/home/fatih/dev/spotify-clone-java/music/src/main/java/com/spotifyclone/music/MusicApplication.java
+/home/fatih/dev/spotify-clone-java/music/src/main/java/com/spotifyclone/music/profiles/Profile.java
+/home/fatih/dev/spotify-clone-java/music/src/main/java/com/spotifyclone/music/profiles/ProfileRepository.java
+/home/fatih/dev/spotify-clone-java/music/src/main/java/com/spotifyclone/music/profiles/ProfileController.java
+/home/fatih/dev/spotify-clone-java/music/src/main/java/com/spotifyclone/music/profiles/ProfileService.java
+/home/fatih/dev/spotify-clone-java/music/src/main/java/com/spotifyclone/music/profiles/ProfileRegistrationRequest.java

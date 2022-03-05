@@ -1,0 +1,7 @@
+com/spotifyclone/music/profiles/ProfileService.class
+com/spotifyclone/music/profiles/Profile$ProfileBuilder.class
+com/spotifyclone/music/profiles/ProfileController.class
+com/spotifyclone/music/profiles/Profile.class
+com/spotifyclone/music/profiles/ProfileRepository.class
+com/spotifyclone/music/profiles/ProfileRegistrationRequest.class
+com/spotifyclone/music/MusicApplication.class
