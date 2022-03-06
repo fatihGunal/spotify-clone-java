@@ -10,6 +10,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>music</module>
+      <module>fraud</module>
   </modules>
 
   <name>spotify-clone-java</name>

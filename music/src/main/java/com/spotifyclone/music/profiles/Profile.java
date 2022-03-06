@@ -48,7 +48,7 @@ public class Profile {
 
     // go for ManyToOne when possible = jpa specification -
     // (readable, easy to understand)
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = {CascadeType.PERSIST})
     @JoinColumn(
             name = "subscription_id",
             referencedColumnName = "id"
