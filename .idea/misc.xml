@@ -11,6 +11,7 @@
       <set>
         <option value="$PROJECT_DIR$/playlists/pom.xml" />
         <option value="$PROJECT_DIR$/recommendations/pom.xml" />
+        <option value="$PROJECT_DIR$/songs/pom.xml" />
       </set>
     </option>
   </component>

@@ -9,7 +9,6 @@ public record ProfileService(ProfileRepository profileRepository) {
         Profile profile = Profile.builder()
                 .firstName(request.firstName())
                 .lastName(request.lastName())
-                .birthDate(request.birthDate())
                 .email(request.email())
                 .build();
         // TODO: Check if email valid
