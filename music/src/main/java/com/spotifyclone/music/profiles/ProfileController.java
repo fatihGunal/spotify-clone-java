@@ -22,9 +22,9 @@ public class ProfileController {
     }
 
     @PostMapping
-    public ResponseEntity<?> registerProfile(@RequestBody ProfileRegistrationRequest profileRegistrationRequest) {
-        log.info("new profile registration {}", profileRegistrationRequest);
-        profileService.registerProfile(profileRegistrationRequest);
+    public ResponseEntity<?> registerProfile(@RequestBody ProfileRegistrationResponse profileRegistrationResponse) {
+        log.info("new profile registration {}", profileRegistrationResponse);
+        profileService.registerProfile(profileRegistrationResponse);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }

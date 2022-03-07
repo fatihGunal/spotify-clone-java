@@ -1,14 +1,14 @@
 package com.spotifyclone.music.profiles;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 @Service
+@Slf4j
 public record ProfileService(ProfileRepository profileRepository) {
 
 
-    public void registerProfile(final ProfileRegistrationRequest request) {
+    public void registerProfile(final ProfileRegistrationResponse request) {
         Profile profile = Profile.builder()
                 .firstName(request.firstName())
                 .lastName(request.lastName())
@@ -19,8 +19,9 @@ public record ProfileService(ProfileRepository profileRepository) {
         // TODO: store customer in db
         profileRepository.saveAndFlush(profile);
         FraudResponse fraudResponse = askFraud(profile);
-        System.out.println(fraudResponse);
+        log.info("Do something with fraudResponse {}", fraudResponse);
     }
+
     private FraudResponse askFraud(final Profile profile) {
 
         WebClient webClient = WebClient.builder().baseUrl("http://localhost:8081").build();

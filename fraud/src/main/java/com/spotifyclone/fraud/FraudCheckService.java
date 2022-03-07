@@ -17,6 +17,7 @@ public class FraudCheckService {
     }
 
     public FraudCheckResponse isFraudulentProfile(final Long profileId) {
+
         FraudCheckHistory fraudCheckHistory = fraudCheckHistoryRepository
                 .getFraudCheckHistoryByProfileId(profileId);
 
@@ -24,6 +25,7 @@ public class FraudCheckService {
             saveFraud(profileId);
             return new FraudCheckResponse(false);
         }
+
         return new FraudCheckResponse(fraudCheckHistory.getIsFraudster());
     }
 
