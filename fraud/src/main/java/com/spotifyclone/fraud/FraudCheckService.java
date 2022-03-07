@@ -16,26 +16,15 @@ public class FraudCheckService {
         this.fraudCheckHistoryRepository = fraudCheckHistoryRepository;
     }
 
-    public boolean isFraudulentProfile(final Long profileId) {
-        FraudCheckHistory fraudCheckHistory = fraudCheckHistoryRepository
-                .getFraudCheckHistoryByProfileId(profileId);
-        if (fraudCheckHistory == null) {
-            saveFraud(profileId);
-            return false;
-        }
-        return fraudCheckHistory.getIsFraudster();
-    }
-
-    public Mono<FraudCheckResponse> isFraudulentProfileMono(final Long profileId) throws InterruptedException {
+    public FraudCheckResponse isFraudulentProfile(final Long profileId) {
         FraudCheckHistory fraudCheckHistory = fraudCheckHistoryRepository
                 .getFraudCheckHistoryByProfileId(profileId);
 
         if (fraudCheckHistory == null) {
             saveFraud(profileId);
-            return Mono.just(new FraudCheckResponse(false));
+            return new FraudCheckResponse(false);
         }
-
-        return Mono.just(new FraudCheckResponse(fraudCheckHistory.getIsFraudster()));
+        return new FraudCheckResponse(fraudCheckHistory.getIsFraudster());
     }
 
     private void saveFraud(final Long profileId) {
@@ -47,4 +36,19 @@ public class FraudCheckService {
                         .build()
         );
     }
+
+
+    // this webflux approach doesn't go in depth
+//    public Mono<FraudCheckResponse> isFraudulentProfileMono(final Long profileId) {
+//
+//        FraudCheckHistory fraudCheckHistory = fraudCheckHistoryRepository
+//                .getFraudCheckHistoryByProfileId(profileId);
+//
+//        if (fraudCheckHistory == null) {
+//            saveFraud(profileId);
+//            return Mono.just(new FraudCheckResponse(false));
+//        }
+//
+//        return Mono.just(new FraudCheckResponse(fraudCheckHistory.getIsFraudster()));
+//    }
 }

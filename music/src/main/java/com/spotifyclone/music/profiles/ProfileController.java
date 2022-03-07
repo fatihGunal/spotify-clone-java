@@ -2,6 +2,8 @@ package com.spotifyclone.music.profiles;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +22,9 @@ public class ProfileController {
     }
 
     @PostMapping
-    public void registerProfile(@RequestBody ProfileRegistrationRequest profileRegistrationRequest) {
+    public ResponseEntity<?> registerProfile(@RequestBody ProfileRegistrationRequest profileRegistrationRequest) {
         log.info("new profile registration {}", profileRegistrationRequest);
         profileService.registerProfile(profileRegistrationRequest);
+        return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }
