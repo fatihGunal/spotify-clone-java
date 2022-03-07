@@ -1,6 +1,7 @@
 package com.spotifyclone.music.profiles;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 @Service
@@ -22,15 +23,19 @@ public record ProfileService(ProfileRepository profileRepository) {
         log.info("Do something with fraudResponse {}", fraudResponse);
     }
 
+    @LoadBalanced
     private FraudResponse askFraud(final Profile profile) {
 
-        WebClient webClient = WebClient.builder().baseUrl("http://localhost:8081").build();
+        // FRAUD as baseUrl is because we use Eureka service discovery, kinda cool!
+        WebClient webClient = WebClient.builder().baseUrl("http://FRAUD:8081").build();
+
         FraudResponse fraudResponse = webClient
                 .get()
                 .uri("/api/v1/fraud-check/{profileId}", profile.getId())
                 .retrieve()
                 .bodyToMono(FraudResponse.class)
                 .block();
+
         return fraudResponse;
     }
 }
