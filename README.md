@@ -8,3 +8,5 @@ Songs -> MongoDB
 Playlist -> postgresql
 
 ![img.png](img.png)
+
+zipkin and sleuth todo!
