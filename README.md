@@ -10,3 +10,4 @@ Playlist -> postgresql
 ![img.png](img.png)
 
 zipkin and sleuth todo!
+configuring api gateway & API gateway in action

@@ -1,0 +1,7 @@
+com/spotifyclone/fraud/FraudApplication.class
+com/spotifyclone/fraud/FraudCheckResponse.class
+com/spotifyclone/fraud/FraudCheckHistory$FraudCheckHistoryBuilder.class
+com/spotifyclone/fraud/FraudCheckHistoryRepository.class
+com/spotifyclone/fraud/FraudCheckHistory.class
+com/spotifyclone/fraud/FraudCheckController.class
+com/spotifyclone/fraud/FraudCheckService.class
